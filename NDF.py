@@ -159,14 +159,14 @@ def Create_weekly_sheets(input_file : str, year : int, km_rate : float, meal_pri
             # Total Péage fin du mois
             pos = 12 + (lastday - week_start.day)*2
             ws[f"E{pos}"].value = "Pe"
-            ws[f"F{pos}"].font = openpyxl.styles.Font(color="FF0000")            
+            ws[f"F{pos}"].font = openpyxl.styles.Font(color="FF0000", size = 8)            
             ws[f"F{pos+1}"].value = "Total Mois"
             # Loyer
             ws[f"L{pos+1}"].value = "Loyer_ES"
             ws[f"L{pos}"].value = loyer
 
         ws["O3"].value = MONTH_FR[month-1]
-        ws["O3"].font = openpyxl.styles.Font(bold=True, color="008000") # Texte en Gras et Vert
+        ws["O3"].font = openpyxl.styles.Font(bold=True, color="008000", size = 9) # Texte en Gras et Vert
 
         k = 0
         for i in range(12, 26, 2):
@@ -203,14 +203,14 @@ def Create_weekly_sheets(input_file : str, year : int, km_rate : float, meal_pri
             # Total Péage fin du mois
             pos = 12 + (lastday - week_start.day)*2
             ws[f"E{pos}"].value = "Pe"
-            ws[f"F{pos}"].font = openpyxl.styles.Font(color="FF0000")
+            ws[f"F{pos}"].font = openpyxl.styles.Font(color="FF0000", size = 8)
             ws[f"F{pos+1}"].value = "Total Mois"
             # Loyer
             ws[f"L{pos+1}"].value = "Loyer_ES"
             ws[f"L{pos}"].value = None
          
         ws["O3"].value = MONTH_FR[month-1]
-        ws["O3"].font = openpyxl.styles.Font(bold=True, color="008000") # Texte en Gras et Vert
+        ws["O3"].font = openpyxl.styles.Font(bold=True, color="008000", size = 9) # Texte en Gras et Vert
 
         k = 0
         for i in range(12, 26, 2):
